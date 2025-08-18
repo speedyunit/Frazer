@@ -3,68 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Frazer huginson</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Client Portfolio</title>
   <style>
-    .rainbow-text {
-      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #333;
+      text-align: center;
+    }
+    header {
+      padding: 20px;
+    }
+    nav {
+      background: #ff6f91;
+      padding: 10px;
+      border-radius: 0 0 15px 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffe5ec;
+    }
+    .content {
+      padding: 40px;
+    }
+    footer {
+      margin-top: 40px;
+      background: #ff6f91;
+      color: white;
+      padding: 15px;
+      border-radius: 15px 15px 0 0;
+    }
+    img.profile {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
     }
   </style>
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans">
-
-  <!-- Navbar -->
-  <nav class="bg-white shadow-md p-4 flex justify-center space-x-6">
-    <a href="index.html" class="rainbow-text">Home</a>
-    <a href="gallery.html" class="text-gray-700 hover:rainbow-text">Gallery</a>
-  </nav>
-
-  <!-- Header -->
-  <header class="bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 text-white text-center p-12 rounded-b-3xl shadow-md">
-    <h1 class="text-5xl font-extrabold">Client Portfolio</h1>
-    <p class="text-lg mt-2">Celebrating creativity, colour, and individuality</p>
+<body>
+  <header>
+    <!-- Profile Picture -->
+    <a href="images/1.jpg">
+      <img src="images/1.jpg" alt="Profile Picture" class="profile">
+    </a>
+    <h1>Welcome to the Portfolio</h1>
   </header>
 
-  <!-- Main Content -->
-  <main class="max-w-5xl mx-auto p-6 grid gap-8 md:grid-cols-2 mt-10">
-    <div class="bg-white p-6 rounded-2xl shadow-lg">
-      <h2 class="text-2xl rainbow-text mb-4">About</h2>
-      <p>
-        gay
-      </p>
-    </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+  </nav>
 
-    <div class="bg-white p-6 rounded-2xl shadow-lg">
-      <h2 class="text-2xl rainbow-text mb-4">Values</h2>
-      <ul class="list-disc list-inside space-y-1">
-        <li>Inclusivity and Pride</li>
-        <li>Bold creative expression</li>
-        <li>Celebrating diversity</li>
-        <li>Community and connection</li>
-      </ul>
-    </div>
+  <div class="content">
+    <h2>About This Client</h2>
+    <p>This is a personal portfolio website showcasing images and information.</p>
+    <p>The design reflects a colorful, inclusive, and expressive vibe.</p>
+  </div>
 
-    <div class="bg-white p-6 rounded-2xl shadow-lg">
-      <h2 class="text-2xl rainbow-text mb-4">Work</h2>
-      <p>
-        Projects span across visual art, design, and storytelling. Each piece is infused with colour and 
-        energy, reflecting the client’s unique voice and vision.
-      </p>
-    </div>
-
-    <div class="bg-white p-6 rounded-2xl shadow-lg">
-      <h2 class="text-2xl rainbow-text mb-4">Contact</h2>
-      <p>Email: <a href="mailto:client@email.com" class="text-blue-600">client@email.com</a></p>
-      <p>Instagram: <a href="https://instagram.com/username" target="_blank" class="text-blue-600">@username</a></p>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-gray-200 text-center py-6 mt-12 rounded-t-3xl">
-    <p class="rainbow-text">&copy; 2025 Client Portfolio – All rights reserved.</p>
+  <footer>
+    <p>&copy; 2025 Client Portfolio</p>
   </footer>
 </body>
 </html>
