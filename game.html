@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Memory Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      margin: 20px;
+    }
+    nav {
+      background: #ff6f91;
+      padding: 10px;
+      border-radius: 0 0 15px 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ffe5ec;
+    }
+    .game-board {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      gap: 15px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .card {
+      width: 100px;
+      height: 100px;
+      background: #ff6f91;
+      border-radius: 10px;
+      cursor: pointer;
+      position: relative;
+      transform: scale(1);
+      transition: transform 0.3s;
+    }
+    .card:active {
+      transform: scale(0.95);
+    }
+    .card img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      display: none;
+    }
+    .card.flipped img {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Memory Game</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="game.html">Game</a>
+  </nav>
+  
+  <div class="game-board" id="gameBoard"></div>
+
+  <script>
+    const images = ["images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg"];
+    let cards = [...images, ...images]; // duplicate for pairs
+    let firstCard = null;
+    let lockBoard = false;
+
+    // Shuffle
+    cards.sort(() => 0.5 - Math.random());
+
+    const gameBoard = document.getElementById("gameBoard");
+
+    cards.forEach(src => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+      const img = document.createElement("img");
+      img.src = src;
+      card.appendChild(img);
+
+      card.addEventListener("click", () => flipCard(card, src));
+      gameBoard.appendChild(card);
+    });
+
+    function flipCard(card, src) {
+      if (lockBoard || card.classList.contains("flipped")) return;
+      card.classList.add("flipped");
+
+      if (!firstCard) {
+        firstCard = { card, src };
+      } else {
+        if (firstCard.src === src) {
+          // Match found
+          firstCard = null;
+        } else {
+          // No match
+          lockBoard = true;
+          setTimeout(() => {
+            card.classList.remove("flipped");
+            firstCard.card.classList.remove("flipped");
+            firstCard = null;
+            lockBoard = false;
+          }, 1000);
+        }
+      }
+    }
+  </script>
+</body>
+</html>
