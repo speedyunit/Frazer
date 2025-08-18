@@ -3,71 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me</title>
+  <title>Client Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .rainbow-text {
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans">
+
   <!-- Navbar -->
   <nav class="bg-white shadow-md p-4 flex justify-center space-x-6">
-    <a href="index.html" class="text-blue-600 font-semibold">Home</a>
-    <a href="gallery.html" class="text-gray-700 hover:text-blue-600">Gallery</a>
+    <a href="index.html" class="rainbow-text">Home</a>
+    <a href="gallery.html" class="hover:rainbow-text text-gray-700">Gallery</a>
   </nav>
 
   <!-- Header -->
-  <header class="bg-white shadow-md p-6 text-center">
-    <h1 class="text-4xl font-bold">John Doe</h1>
-    <p class="text-lg text-gray-600">Student | Developer | Explorer</p>
+  <header class="bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 text-white text-center p-12 rounded-b-3xl shadow-md">
+    <h1 class="text-5xl font-extrabold">Client Portfolio</h1>
+    <p class="text-lg mt-2">Celebrating creativity, colour, and individuality</p>
   </header>
 
-  <!-- Main Section -->
-  <main class="max-w-4xl mx-auto p-6">
-    <section class="flex flex-col items-center">
-      <img src="profile.jpg" alt="Profile Picture" class="rounded-full shadow-lg w-48 h-48 object-cover mb-6">
-      <p class="text-center text-gray-700 text-lg">
-        Hi, I’m John! I’m passionate about technology, science, and creativity. This site is a place where you can learn a little about me, my interests, and some of my projects.
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto p-6 grid gap-8 md:grid-cols-2 mt-10">
+    <div class="bg-white p-6 rounded-2xl shadow-lg">
+      <h2 class="text-2xl rainbow-text mb-4">About</h2>
+      <p>
+        This portfolio highlights the creativity, identity, and expression of our client. 
+        It’s a celebration of individuality, showcasing work that embraces diversity, colour, and authenticity.
       </p>
-    </section>
+    </div>
 
-    <!-- Information -->
-    <section class="mt-12 grid gap-8 md:grid-cols-2">
-      <div class="bg-white p-6 rounded-2xl shadow-md">
-        <h2 class="text-2xl font-semibold mb-4">About Me</h2>
-        <p>
-          I’m a 17-year-old student interested in coding, cybersecurity, and design. 
-          In my free time, I enjoy working on personal projects, learning new skills, and playing games.
-        </p>
-      </div>
+    <div class="bg-white p-6 rounded-2xl shadow-lg">
+      <h2 class="text-2xl rainbow-text mb-4">Values</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li>Inclusivity and Pride</li>
+        <li>Bold creative expression</li>
+        <li>Celebrating diversity</li>
+        <li>Community and connection</li>
+      </ul>
+    </div>
 
-      <div class="bg-white p-6 rounded-2xl shadow-md">
-        <h2 class="text-2xl font-semibold mb-4">Hobbies</h2>
-        <ul class="list-disc list-inside">
-          <li>Programming and web development</li>
-          <li>3D printing and modelling</li>
-          <li>Gaming</li>
-          <li>Exploring science and astronomy</li>
-        </ul>
-      </div>
+    <div class="bg-white p-6 rounded-2xl shadow-lg">
+      <h2 class="text-2xl rainbow-text mb-4">Work</h2>
+      <p>
+        Projects span across visual art, design, and storytelling. Each piece is infused with colour and 
+        energy, reflecting the client’s unique voice and vision.
+      </p>
+    </div>
 
-      <div class="bg-white p-6 rounded-2xl shadow-md">
-        <h2 class="text-2xl font-semibold mb-4">Projects</h2>
-        <p>
-          I’ve worked on several projects including a fall detection device, a 
-          personal website, and some experiments in cybersecurity. You can 
-          find more details on my GitHub profile.
-        </p>
-      </div>
-
-      <div class="bg-white p-6 rounded-2xl shadow-md">
-        <h2 class="text-2xl font-semibold mb-4">Contact</h2>
-        <p>Email: <a href="mailto:johndoe@email.com" class="text-blue-600">johndoe@email.com</a></p>
-        <p>GitHub: <a href="https://github.com/username" target="_blank" class="text-blue-600">github.com/username</a></p>
-      </div>
-    </section>
+    <div class="bg-white p-6 rounded-2xl shadow-lg">
+      <h2 class="text-2xl rainbow-text mb-4">Contact</h2>
+      <p>Email: <a href="mailto:client@email.com" class="text-blue-600">client@email.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/username" target="_blank" class="text-blue-600">@username</a></p>
+    </div>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-200 text-center py-4 mt-12">
-    <p>&copy; 2025 John Doe. All rights reserved.</p>
+  <footer class="bg-gray-200 text-center py-6 mt-12 rounded-t-3xl">
+    <p class="rainbow-text">&copy; 2025 Client Portfolio – All rights reserved.</p>
   </footer>
 </body>
 </html>
